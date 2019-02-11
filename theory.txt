@@ -1,0 +1,21 @@
+1.1 ((λ p. (λ q. ((q (p r)) s))) ((q ((λ p. p) r)) s))
+
+С убранными скобками: (λp.λq.q(pr)s)(q((λp.p)r)s)
+
+(λp.λq.q(pr)s)(q((λp.p)r)s)
+(λp.λq.q(pr)s)(qrs)
+(λp.λx.x(pr)s)(qrs)
+(λx.x(qrsr)s)
+
+1.2 ((λ a. λ b. (λ x. x) b a (a b x) ((λ a. (λ b. a)) x)) (λ b. b)) [x := b]
+
+С убранными скобками: (λa.λb.(λx.x)ba(abx)(λa.λb.a)x)(λb.b)[x:=b]
+
+(λa.λb.(λx.x)ba(abx)(λa.λb.a)x)(λb.b)[x:=b]
+(λa.λb.(λx.x)ba(abx)λb.x)(λb.b)[x:=b]
+(λa.λb.ba(abx)λb.x)(λb.b)[x:=b]
+(λb.b(λb.b)((λb.b)bx)λb.x)[x:=b]
+(λb.b(λb.b)(bx)λb.x)[x:=b]
+(λb.b(bx)λb.x)[x:=b]
+(λz.z(zx)λz.x)[x:=b]
+(λz.z(zb)λz.b)
